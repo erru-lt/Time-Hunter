@@ -9,7 +9,7 @@ namespace Assets.CodeBase.Hero
     {
         private static readonly int RunHash = Animator.StringToHash("Run");
         private static readonly int AttackHash = Animator.StringToHash("Attack");
-        [SerializeField] private Animation _runAnimation;
+
         [SerializeField] private Animator _animator;
         [SerializeField] private CharacterController _characterController;
         private IInputService _inputService;

@@ -8,6 +8,6 @@ public class HeroInstaller : MonoInstaller
 
     public override void InstallBindings()
     {
-        Container.Bind<HeroMove>().FromInstance(_heroMove);
+        Container.Bind<HeroMove>().FromInstance(_heroMove).AsSingle();
     }
 }

@@ -1,7 +1,6 @@
-﻿using Assets.CodeBase.Infrastructure.States;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace Assets.CodeBase.Infrastructure
+namespace Assets.CodeBase.Infrastructure.States
 {
     public class LoadProgressState : IState
     {

@@ -7,10 +7,10 @@ namespace Assets.CodeBase.Infrastructure
     public class GameBootstrapper : MonoBehaviour
     {
         private StatesFactory _statesFactory;
-        private GameStateMachine _gameStateMachine;
+        private IGameStateMachine _gameStateMachine;
 
         [Inject]
-        public void Construct(StatesFactory statesFactory, GameStateMachine gameStateMachine)
+        public void Construct(StatesFactory statesFactory, IGameStateMachine gameStateMachine)
         {
             _statesFactory = statesFactory;
             _gameStateMachine = gameStateMachine;

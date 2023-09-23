@@ -7,5 +7,6 @@ namespace Assets.CodeBase.Services.Input
         Vector2 Axis { get; }
 
         bool GetDashButton();
+        bool IsAttackButtonUp();
     }
 }

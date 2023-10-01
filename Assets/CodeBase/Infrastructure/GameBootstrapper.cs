@@ -20,6 +20,7 @@ namespace Assets.CodeBase.Infrastructure
         {
             _gameStateMachine.RegisterState(_statesFactory.Create<BootstrapState>());
             _gameStateMachine.RegisterState(_statesFactory.Create<LoadProgressState>());
+            _gameStateMachine.RegisterState(_statesFactory.Create<LoadLevelState>());
 
             _gameStateMachine.Enter<BootstrapState>();
         }

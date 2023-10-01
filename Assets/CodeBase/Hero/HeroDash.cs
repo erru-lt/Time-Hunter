@@ -45,13 +45,11 @@ namespace Assets.CodeBase.Hero
 
             while (Time.time <= startTime + _dashTime)
             {
-                //transform.localScale = Vector3.zero;
                 _heroAnimator.IncreaseRunAnimationSpeed();
                 _characterController.Move(_heroMove.MoveSpeed * transform.forward * Time.deltaTime);
                 yield return null;
             }
 
-            //transform.localScale = Vector3.one;
             _heroAnimator.DecreaseAnimationSpeed();
             _heroMove.MoveSpeed = originalSpeed;
             _isDashing = false;

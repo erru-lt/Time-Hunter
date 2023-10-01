@@ -13,5 +13,10 @@ namespace Assets.CodeBase.GameLogic
             Debug.DrawRay(worldPos, Vector3.forward * radius, Color.red, duration);
             Debug.DrawRay(worldPos, Vector3.back * radius, Color.red, duration);
         }
+
+        public static void DrawDebug(Vector3 position, Vector3 targetPosition)
+        {
+            Debug.DrawRay(position, targetPosition);
+        }
     }
 }

@@ -1,6 +1,4 @@
 using Assets.CodeBase.Services.Input;
-using System;
-using System.Collections;
 using UnityEngine;
 using Zenject;
 

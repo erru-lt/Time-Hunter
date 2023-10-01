@@ -4,14 +4,14 @@ namespace Assets.CodeBase.Services.Input
 {
     public abstract class InputService : IInputService
     {
+        private const KeyCode DashButton = KeyCode.Space;
         protected const string HorizontalAxis = "Horizontal";
         protected const string VerticalAxis = "Vertical";
-        private const string DashButton = "Space";
 
         public abstract Vector2 Axis { get; }
 
         public bool GetDashButton() =>
-            SimpleInput.GetButtonDown(DashButton);
+            SimpleInput.GetKeyDown(DashButton);
 
         public bool IsAttackButtonUp() => 
             SimpleInput.GetMouseButtonDown(0);

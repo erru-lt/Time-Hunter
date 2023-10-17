@@ -1,28 +1,29 @@
-using Assets.CodeBase.GameLogic.Spawner;
+﻿using Assets.CodeBase.Hero;
 using Assets.CodeBase.Infrastructure.AssetManagement;
+using System;
 using UnityEngine;
 using Zenject;
 
 namespace Assets.CodeBase.Infrastructure.Factory
 {
-    public class EnemyFactory
+    public class HeroFactory
     {
         private readonly IAssetProvider _assetProvider;
         private readonly DiContainer _diContainer;
 
-        public EnemyFactory(IAssetProvider assetProvider, DiContainer diContainer)
+        public HeroFactory(IAssetProvider assetProvider, DiContainer diContainer)
         {
             _assetProvider = assetProvider;
             _diContainer = diContainer;
         }
 
-        public void CreateEnemy(Transform parent)
+        public void CreateHero()
         {
-            GameObject enemyPrefab = LoadPrefab();
-            _diContainer.InstantiatePrefabForComponent<EnemyAttack>(enemyPrefab, parent);
+            GameObject heroPrefab = LoadPrefab();
+            _diContainer.InstantiatePrefabForComponent<HeroMove>(heroPrefab);
         }
 
         private GameObject LoadPrefab() =>
-            _assetProvider.LoadPrefab(AssetPath.EnemyPath);
+            _assetProvider.LoadPrefab(AssetPath.HeroPath);
     }
 }

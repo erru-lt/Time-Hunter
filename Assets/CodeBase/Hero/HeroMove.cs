@@ -50,5 +50,10 @@ namespace Assets.CodeBase.Hero
 
             _characterController.Move(_moveSpeed * Time.deltaTime * movementVector);
         }
+
+        public class Factory : PlaceholderFactory<HeroMove>
+        {
+
+        }
     }
 }

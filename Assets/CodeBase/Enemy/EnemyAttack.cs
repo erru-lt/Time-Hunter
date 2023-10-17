@@ -21,6 +21,7 @@ public class EnemyAttack : MonoBehaviour
 
     private void Update()
     {
+        if(_hero == null) return;
         CheckDistanceToHero();
         LookAtHero();
     }
@@ -56,5 +57,10 @@ public class EnemyAttack : MonoBehaviour
             _isShooting = true;
             _enemyAnimator.PlayAttackAnimation();
         }
+    }
+
+    public class Factory : PlaceholderFactory<EnemyAttack>
+    {
+
     }
 }

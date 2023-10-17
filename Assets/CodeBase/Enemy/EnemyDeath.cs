@@ -16,11 +16,11 @@ namespace Assets.CodeBase.Enemy
         [SerializeField] private float _effectiveDistance;
         private Bomb _bomb;
 
-        [Inject]
-        public void Construct(Bomb bomb)
-        {
-            _bomb = bomb;
-        }
+        //[Inject]
+        //public void Construct(Bomb bomb)
+        //{
+        //    _bomb = bomb;
+        //}
 
         public void Die()
         {
